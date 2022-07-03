@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: a5b51cf02ab6cdb49a3b4ba30fd74343
   - enabled: 1
-    path: Assets/Scenes/Game/SafeZone/MainArea.unity
+    path: Assets/Scenes/Game/SafeZone/TrialAndError.unity
     guid: 0c8313f4c24e00041b2fd1b3ddd0f452
   - enabled: 1
     path: Assets/Scenes/Game/TheDungeon/Lobby.unity
