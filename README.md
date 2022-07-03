@@ -9,9 +9,9 @@ The game!!!
 <br>
 <br>
 #### Contributors/Creators
-Owner - StalkedBamboo (TheAxolot77)
+Creator/Developer - StalkedBamboo (TheAxolot77)
 
-Owner - Bluechamele0n
+Creator/Developer - Bluechamele0n
 
 <br>
 
