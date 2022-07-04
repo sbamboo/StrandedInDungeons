@@ -30,5 +30,30 @@ admin shorcut
 dubble sidiga sandaler 
 mun kavel (makes the player speathce less)
 
+resourceLoader
+  bytes = System.IO.File.LoadAllBytes(filePath);
+  texture = new Texture2D(2, 2);
+  texture.LoadImage(bytes);
+  
+  var www = UnityWebRequestTexture.GetTexture("file://" + filePath);
+  yield return www.SendWebRequest();
+  texture = DownloadHandlerTexture.GetContent(www);
 
 
+
+dataSystem
+  Json?
+  
+   {"playerData":[
+      {"3a4a45a5-b374-418f-9c3e-0ffee0e8ad3b":[
+        {"Name":"Tor2006"},
+        {"Skin":"2"},
+        
+        {"Attributes":[
+          {"Health":"10"},
+          {"Speed":"20"}
+        ]}
+      ]}
+   ]}
+     
+   
