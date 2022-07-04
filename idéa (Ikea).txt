@@ -43,17 +43,27 @@ resourceLoader
 
 dataSystem
   Json?
-  
-   {"playerData":[
-      {"3a4a45a5-b374-418f-9c3e-0ffee0e8ad3b":[
+  {"playerData":[
+     {"5a3a9fbd-00d5-4454-9a75-cf51ec57b273":[
+        {"Name":"Daksido06"},
+        {"Skin":"1"}
+
+        {"Attributes":[
+            {"Health":"10"},
+            {"Speed":"2,5"},
+            {"JumpHeigth":"40"}
+        ]}
+     ]},
+     {"650e016a-699e-41d0-9d74-60236642df0d":[
         {"Name":"Tor2006"},
         {"Skin":"2"},
-        
+
         {"Attributes":[
-          {"Health":"10"},
-          {"Speed":"20"}
+            {"Health":"10"},
+            {"Speed":"2,5"},
+            {"JumpHeigth":"40"}
         ]}
-      ]}
-   ]}
+     ]}
+  ]}
      
    
