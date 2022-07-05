@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController2 : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     // Script Setup
     public Rigidbody2D rb2D;
     public Collider2D standingCollider;
     public Collider2D sneakingCollider;
     public Collider2D crouchingCollider;
+    public Collider2D footTriggerCollider;
 
     public float movespeed = 3f;
     public float jumpforce = 40f;
@@ -51,6 +52,15 @@ public class PlayerController2 : MonoBehaviour
         else
         {
             moveVertical = Input.GetAxisRaw("Vertical");
+        }
+
+        //FootIsColliding check
+        if (footTriggerCollider.IsTouchingLayers(-1))
+        {
+            isJumping = false;
+        } else
+        {
+            isJumping = true;
         }
     }
 
@@ -143,22 +153,6 @@ public class PlayerController2 : MonoBehaviour
         if (moveHorizontal < 0)
         {
             gameObject.transform.localScale = new Vector3(-3, 4, 1);
-        }
-    }
-
-    //Only allow jumping on a collider/object tagged "platform"
-    void OnTriggerEnter2D(Collider2D collision) 
-    {
-        if(collision.gameObject.tag == "Platform")
-        {
-            isJumping = false;
-        }
-    }
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Platform")
-        {
-            isJumping = true;
         }
     }
 }
