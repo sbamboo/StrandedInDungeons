@@ -35,6 +35,11 @@ public class PlayerController2 : MonoBehaviour
     private bool sneakKey;
     private bool crouchKey;
 
+    //Debug (make public to see)
+    public bool debugStandingColliderEnabled;
+    public bool debugSneakingColliderEnabled;
+    public bool debugCrouchingColliderEnabled;
+
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +51,11 @@ public class PlayerController2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        debugStandingColliderEnabled = standingCollider.enabled;
+        debugSneakingColliderEnabled = sneakingCollider.enabled;
+        debugCrouchingColliderEnabled = crouchingCollider.enabled;
+
         //Get Horizontal movement
         moveHorizontal = Input.GetAxisRaw("Horizontal");
        
@@ -58,6 +68,7 @@ public class PlayerController2 : MonoBehaviour
         {
             moveVertical = Input.GetAxisRaw("Vertical");
         }
+
     }
 
     //Fixed update
