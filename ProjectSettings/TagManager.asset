@@ -12,9 +12,9 @@ TagManager:
   - 
   - Water
   - UI
-  - enviroment
+  - enviroment_bottom
+  - enviroment_top
   - player
-  - 
   - 
   - 
   - 
@@ -41,4 +41,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: bottom
+    uniqueID: 3649841333
+    locked: 0
+  - name: top
+    uniqueID: 4085301983
+    locked: 0
+  - name: above_envir
+    uniqueID: 3320516691
     locked: 0
