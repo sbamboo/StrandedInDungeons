@@ -839,14 +839,10 @@ GameObject:
   - component: {fileID: 1455729035}
   - component: {fileID: 1455729040}
   - component: {fileID: 1455729042}
-<<<<<<< Updated upstream
   - component: {fileID: 1455729041}
   - component: {fileID: 1455729034}
   - component: {fileID: 1455729043}
   - component: {fileID: 1455729044}
-=======
-  - component: {fileID: 1455729043}
->>>>>>> Stashed changes
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -871,7 +867,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -942,7 +938,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c7ee120913ec09e47a079dfb4a057b6a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8050561f80d777140afe429014b6cea4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -985,7 +981,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1035,21 +1031,14 @@ CapsuleCollider2D:
   m_Offset: {x: -0.011336427, y: -0.2574313}
   m_Size: {x: 0.14763713, y: 0.116779625}
   m_Direction: 0
-<<<<<<< Updated upstream
 --- !u!61 &1455729043
 BoxCollider2D:
-=======
---- !u!95 &1455729043
-Animator:
-  serializedVersion: 4
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1455729033}
   m_Enabled: 1
-<<<<<<< Updated upstream
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1059,7 +1048,7 @@ Animator:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1085,7 +1074,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1094,19 +1083,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8256881, y: 0.13700062}
   m_EdgeRadius: 0
-=======
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: def41d4506b603c4baad0803c84a2d59, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
->>>>>>> Stashed changes
 --- !u!1 &1511298890
 GameObject:
   m_ObjectHideFlags: 0
