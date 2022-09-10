@@ -114,7 +114,7 @@ public class PlayerController2 : MonoBehaviour
         }
 
         //GetCrouchKey
-        if (Input.GetKey(KeyCode.LeftAlt) | Input.GetKey(KeyCode.RightAlt))
+        if (Input.GetKey(KeyCode.S) | Input.GetKey(KeyCode.S))
         {
             crouchKey = true;
         } else {
