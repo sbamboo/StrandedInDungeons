@@ -9,6 +9,7 @@ public class PlayerController2 : MonoBehaviour
     public Collider2D standingCollider;
     public Collider2D sneakingCollider;
     public Collider2D crouchingCollider;
+    public Animator animator;
 
     public float movespeed = 3f;
     public float sprintmodifier = 1.2f;
@@ -39,6 +40,7 @@ public class PlayerController2 : MonoBehaviour
     public bool debugStandingColliderEnabled;
     public bool debugSneakingColliderEnabled;
     public bool debugCrouchingColliderEnabled;
+    public float debugTimeFixedDeltaTime = 0f;
 
 
     // Start is called before the first frame update
@@ -74,6 +76,7 @@ public class PlayerController2 : MonoBehaviour
     //Fixed update
     void FixedUpdate()
     {
+
         //Walk if allowed
         if (AllowWalk)
         {
@@ -113,6 +116,7 @@ public class PlayerController2 : MonoBehaviour
                 movespeed = (movespeed/sneakmodifier);
                 standingCollider.enabled = false;
                 crouchingCollider.enabled = false;
+                animator.SetBool("animIsSneaking",true);
                 isSneaking = true;
             }
             else if (isSneaking && !sneakKey)
@@ -120,6 +124,7 @@ public class PlayerController2 : MonoBehaviour
                 movespeed = (movespeed*sneakmodifier);
                 standingCollider.enabled = true;
                 crouchingCollider.enabled = true;
+                animator.SetBool("animIsSneaking",false);
                 isSneaking = false;
             }
         }
@@ -142,6 +147,7 @@ public class PlayerController2 : MonoBehaviour
                 standingCollider.enabled = false;
                 sneakingCollider.enabled = false;
                 crouchingCollider.enabled = true;
+                animator.SetBool("animIsCrawling",true);
                 isCrouching = true;
             }
             else if (isCrouching && !crouchKey)
@@ -150,6 +156,7 @@ public class PlayerController2 : MonoBehaviour
                 standingCollider.enabled = true;
                 sneakingCollider.enabled = true;
                 crouchingCollider.enabled = false;
+                animator.SetBool("animIsCrawling",false);
                 isCrouching = false;
             }
         }
@@ -169,11 +176,13 @@ public class PlayerController2 : MonoBehaviour
             if (!isSprinting && sprintKey)
             {
                 movespeed = (movespeed*sprintmodifier);
+                animator.SetBool("animIsRunning",true);
                 isSprinting = true;
             }
             else if (isSprinting && !sprintKey)
             {
                 movespeed = (movespeed/sprintmodifier);
+                animator.SetBool("animIsRunning",false);
                 isSprinting = false;
             }
         }
