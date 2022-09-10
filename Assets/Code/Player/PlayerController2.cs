@@ -11,12 +11,17 @@ public class PlayerController2 : MonoBehaviour
     public Collider2D crouchingCollider;
 
     public float movespeed = 3f;
+    public float sprintmodifier = 1.2f;
+    public float sneakmodifier = 2f;
+    public float crouchmodifier = 2f;
     public float jumpforce = 40f;
+    public bool isSprinting = false;
     public bool isJumping = false;
     public bool isSneaking = false;
     public bool isCrouching = false;
 
     public bool AllowWalk = true;
+    public bool AllowSprint = true;
     public bool AllowJump = true;
     public bool AllowSneak = true;
     public bool AllowCrouch = true;
@@ -26,6 +31,7 @@ public class PlayerController2 : MonoBehaviour
     private float moveVertical;
 
     //Misc
+    private bool sprintKey;
     private bool sneakKey;
     private bool crouchKey;
 
@@ -93,12 +99,14 @@ public class PlayerController2 : MonoBehaviour
             //Check for sneak key.
             if (!isSneaking && sneakKey)
             {
+                movespeed = (movespeed/sneakmodifier);
                 standingCollider.enabled = false;
                 crouchingCollider.enabled = false;
                 isSneaking = true;
             }
             else if (isSneaking && !sneakKey)
             {
+                movespeed = (movespeed*sneakmodifier);
                 standingCollider.enabled = true;
                 crouchingCollider.enabled = true;
                 isSneaking = false;
@@ -106,7 +114,7 @@ public class PlayerController2 : MonoBehaviour
         }
 
         //GetCrouchKey
-        if (Input.GetKey(KeyCode.LeftControl) | Input.GetKey(KeyCode.RightControl))
+        if (Input.GetKey(KeyCode.LeftAlt) | Input.GetKey(KeyCode.RightAlt))
         {
             crouchKey = true;
         } else {
@@ -114,11 +122,12 @@ public class PlayerController2 : MonoBehaviour
         }
 
         //Crouch: Disable stadingCollider and sneakingCollider if crouching
-            if (AllowCrouch)
+        if (AllowCrouch)
         {
             //Check for crouch key.
             if (!isCrouching && crouchKey)
             {
+                movespeed = (movespeed/crouchmodifier);
                 standingCollider.enabled = false;
                 sneakingCollider.enabled = false;
                 crouchingCollider.enabled = true;
@@ -126,10 +135,35 @@ public class PlayerController2 : MonoBehaviour
             }
             else if (isCrouching && !crouchKey)
             {
+                movespeed = (movespeed*crouchmodifier);
                 standingCollider.enabled = true;
                 sneakingCollider.enabled = true;
                 crouchingCollider.enabled = false;
                 isCrouching = false;
+            }
+        }
+
+        //GetSprintKey
+        if (Input.GetKey(KeyCode.LeftControl) | Input.GetKey(KeyCode.RightControl))
+        {
+            sprintKey = true;
+        } else {
+            sprintKey = false;
+        }
+
+        //Sprint: Change movespeed
+        if (AllowSprint)
+        {
+            //Check for sprint key.
+            if (!isSprinting && sprintKey)
+            {
+                movespeed = (movespeed*sprintmodifier);
+                isSprinting = true;
+            }
+            else if (isSprinting && !sprintKey)
+            {
+                movespeed = (movespeed/sprintmodifier);
+                isSprinting = false;
             }
         }
 
