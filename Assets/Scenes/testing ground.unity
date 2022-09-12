@@ -319,7 +319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605917767}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.07, y: -5.1, z: 0}
+  m_LocalPosition: {x: 0.07, y: -5.27, z: 0}
   m_LocalScale: {x: 5.0000005, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -734,19 +734,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1455729033}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb8a68d9177ca2e45bdff4db9ff9fd84, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a339683b92517649b3d0f4d03a28ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb2D: {fileID: 1455729035}
   standingCollider: {fileID: 1455729034}
   sneakingCollider: {fileID: 1455729043}
   crouchingCollider: {fileID: 1455729044}
-  animator: {fileID: 0}
+  animator: {fileID: 1455729046}
   movespeed: 1.6
   sprintmodifier: 1.2
-  sneakmodifier: 2
-  crouchmodifier: 2
-  jumpforce: 45
+  sneakmodifier: 1.6
+  crouchmodifier: 1.6
+  jumpforce: 42
   isSprinting: 0
   isJumping: 0
   isSneaking: 0
