@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//OBS this script has been replaced by using Cinemachine, but is left in the project as a resource.
+
 public class CameraFollowSmooth : MonoBehaviour
 {
     //Define values
@@ -19,7 +21,7 @@ public class CameraFollowSmooth : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void LateUpdate()
     {
         if (doSmooth)
         {
