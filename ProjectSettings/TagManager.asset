@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Platform
+  - item
+  - itemHolderObject
   layers:
   - Default
   - TransparentFX
@@ -42,12 +44,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: bottom
+  - name: envir_bottom
     uniqueID: 3649841333
     locked: 0
-  - name: top
+  - name: envir_top
     uniqueID: 4085301983
     locked: 0
-  - name: above_envir
+  - name: player
     uniqueID: 3320516691
+    locked: 0
+  - name: above_player
+    uniqueID: 3466273095
     locked: 0
