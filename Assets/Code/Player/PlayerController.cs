@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// This script is for me and my friends game. And we, Tor Andersson and Simon Kalmi Claesson remain in overship of this code.
+// License: https://github.com/simonkalmiclaesson/StrandedInDungeons/blob/main/license.md
+
 public class PlayerController : MonoBehaviour
 {
     // Script Setup
@@ -10,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public Collider2D sneakingCollider;
     public Collider2D crouchingCollider;
     public Animator animator;
+    public Collider2D AlwaysCollider; 
 
     public float movespeed = 3f;
     public float sprintmodifier = 1.2f;
@@ -42,6 +46,9 @@ public class PlayerController : MonoBehaviour
     public bool debugCrouchingColliderEnabled;
     public float debugTimeFixedDeltaTime = 0f;
 
+    //Items
+    [SerializeField]
+    ItemBehavior items;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +60,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Has items debug
+        if (items.hasItem == true)
+        {
+            Debug.Log(items.hasItem);
+        }
 
         debugStandingColliderEnabled = standingCollider.enabled;
         debugSneakingColliderEnabled = sneakingCollider.enabled;
@@ -123,7 +135,7 @@ public class PlayerController : MonoBehaviour
             {
                 movespeed = (movespeed*sneakmodifier);
                 standingCollider.enabled = true;
-                crouchingCollider.enabled = true;
+                crouchingCollider.enabled = false;
                 animator.SetBool("animIsSneaking",false);
                 isSneaking = false;
             }
