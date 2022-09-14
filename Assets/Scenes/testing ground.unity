@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 629435832}
   - component: {fileID: 629435831}
   - component: {fileID: 629435833}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ground
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -468,6 +468,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &869899863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 869899864}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &869899864
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869899863}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.486, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1455729037}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &931139069
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,9 +706,9 @@ GameObject:
   - component: {fileID: 1079689850}
   - component: {fileID: 1079689849}
   - component: {fileID: 1079689851}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall 1
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -742,8 +773,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079689848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.14, y: -0.6663, z: 0}
-  m_LocalScale: {x: 1, y: 4.9874554, z: 1}
+  m_LocalPosition: {x: -13.14, y: 0.9544, z: 0}
+  m_LocalScale: {x: 1, y: 8.228841, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -890,15 +921,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1455729037}
   - component: {fileID: 1455729035}
-  - component: {fileID: 1455729040}
-  - component: {fileID: 1455729041}
   - component: {fileID: 1455729034}
   - component: {fileID: 1455729043}
   - component: {fileID: 1455729044}
+  - component: {fileID: 1455729048}
   - component: {fileID: 1455729045}
   - component: {fileID: 1455729046}
   - component: {fileID: 1455729047}
-  - component: {fileID: 1455729048}
   - component: {fileID: 1455729049}
   m_Layer: 0
   m_Name: Player
@@ -967,72 +996,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 554218279}
+  - {fileID: 869899864}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1455729040
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1455729033}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.028028667, y: -0.4898219}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 0.2, y: 0.2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.114640355, y: 0.0419904}
-  m_EdgeRadius: 0
---- !u!114 &1455729041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1455729033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a339683b92517649b3d0f4d03a28ceb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb2D: {fileID: 1455729035}
-  standingCollider: {fileID: 1455729034}
-  sneakingCollider: {fileID: 1455729043}
-  crouchingCollider: {fileID: 1455729044}
-  animator: {fileID: 1455729046}
-  AlwaysCollider: {fileID: 1455729048}
-  movespeed: 1.6
-  sprintmodifier: 1.2
-  sneakmodifier: 1.6
-  crouchmodifier: 1.6
-  jumpforce: 42
-  isSprinting: 0
-  isJumping: 0
-  isSneaking: 0
-  isCrouching: 0
-  AllowWalk: 1
-  AllowSprint: 1
-  AllowJump: 1
-  AllowSneak: 1
-  AllowCrouch: 1
-  debugStandingColliderEnabled: 0
-  debugSneakingColliderEnabled: 0
-  debugCrouchingColliderEnabled: 0
-  debugTimeFixedDeltaTime: 0
-  items: {fileID: 1455729047}
 --- !u!61 &1455729043
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1172,6 +1139,7 @@ MonoBehaviour:
   hand: {fileID: 554218279}
   itemHolder: {fileID: 1525785468}
   hasItem: 0
+  releaseItem: 101
   offset: {x: 0.25, y: 0.2, z: 0}
 --- !u!61 &1455729048
 BoxCollider2D:
@@ -1199,32 +1167,55 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.122205615, y: 0.10336885}
   m_EdgeRadius: 0
---- !u!61 &1455729049
-BoxCollider2D:
+--- !u!114 &1455729049
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1455729033}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.03948152, y: -0.45732772}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 0.2, y: 0.2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.052443266, y: 0.08534455}
-  m_EdgeRadius: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18321399f73c4d4fba84ec5a87157fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standingCollider: {fileID: 1455729034}
+  sneakingCollider: {fileID: 1455729043}
+  crouchingCollider: {fileID: 1455729044}
+  animator: {fileID: 1455729046}
+  AlwaysCollider: {fileID: 1455729048}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 512
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  groundCheck: {fileID: 869899864}
+  groundCheckRadius: 0.68
+  movespeed: 1.6
+  sprintmodifier: 1.2
+  sneakmodifier: 1.6
+  crouchmodifier: 1.6
+  jumpforce: 42
+  walljumpforce: 20
+  isSprinting: 0
+  isSneaking: 0
+  isCrouching: 0
+  walljumps: 3
+  walljumpbounce: 40
+  canJump: 0
+  canWallJump: 0
+  AllowWalk: 1
+  AllowSprint: 1
+  AllowJump: 1
+  AllowSneak: 1
+  AllowCrouch: 1
+  AllowWallJump: 1
+  debugStandingColliderEnabled: 0
+  debugSneakingColliderEnabled: 0
+  debugCrouchingColliderEnabled: 0
+  debugTimeFixedDeltaTime: 0
+  items: {fileID: 1455729047}
 --- !u!1 &1525785467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,6 +1258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1527313771}
   - component: {fileID: 1527313770}
+  - component: {fileID: 1527313772}
   m_Layer: 0
   m_Name: EventHandler
   m_TagString: Untagged
@@ -1302,6 +1294,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1527313772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527313769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4708ca15633131c4cb56f3a15f87ea78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cmvcam2d: {fileID: 931139069}
 --- !u!1 &1611559724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,7 +1429,7 @@ GameObject:
   - component: {fileID: 1680475297}
   - component: {fileID: 1680475296}
   - component: {fileID: 1680475295}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ground
   m_TagString: Platform
   m_Icon: {fileID: 0}

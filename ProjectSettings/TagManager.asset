@@ -17,8 +17,8 @@ TagManager:
   - enviroment_bottom
   - enviroment_top
   - player
-  - 
-  - 
+  - ground
+  - wall
   - 
   - 
   - 

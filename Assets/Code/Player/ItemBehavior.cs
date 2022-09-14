@@ -7,6 +7,7 @@ public class ItemBehavior : MonoBehaviour
     public Transform hand;
     public Transform itemHolder;
     public bool hasItem = false;
+    public KeyCode releaseItem;
 
     [SerializeField]
     Vector3 offset;
@@ -23,7 +24,7 @@ public class ItemBehavior : MonoBehaviour
     void Update()
     {
         //Drop item
-        if (Input.GetKey(KeyCode.E) && hasItem)
+        if (Input.GetKey(releaseItem) && hasItem)
         {
             item.transform.parent = itemHolder;
             hasItem = false;
