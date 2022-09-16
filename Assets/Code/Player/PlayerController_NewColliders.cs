@@ -44,6 +44,7 @@ public class PlayerController_NewColliders : MonoBehaviour
     public int walljumps = 3;
     private int i_walljumps = 0;
     public float walljumpbounce = 10f;
+    public float walljump2ndJumpmodifier = 0.5f;
 
     //states
     public bool canJump = false;
@@ -120,6 +121,7 @@ public class PlayerController_NewColliders : MonoBehaviour
                 if (AllowWallJump && moveVertical > 0.1f)
                 {
                     rb2D.AddForce(new Vector2(Mathf.Clamp(transform.localScale.x, -1, 1) * -walljumpbounce, moveVertical * walljumpforce), ForceMode2D.Impulse);
+                    rb2D.AddForce(new Vector2(0f, moveVertical * walljumpforce * walljump2ndJumpmodifier), ForceMode2D.Impulse);
                     //transform.localScale = new Vector3(0 - transform.localScale.x, transform.localScale.y, transform.localScale.z);
                     i_walljumps--;
                 }

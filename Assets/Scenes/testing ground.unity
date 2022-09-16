@@ -920,6 +920,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1455729037}
+  - component: {fileID: 1455729049}
   - component: {fileID: 1455729035}
   - component: {fileID: 1455729034}
   - component: {fileID: 1455729043}
@@ -928,7 +929,6 @@ GameObject:
   - component: {fileID: 1455729045}
   - component: {fileID: 1455729046}
   - component: {fileID: 1455729047}
-  - component: {fileID: 1455729049}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1202,7 +1202,8 @@ MonoBehaviour:
   isSneaking: 0
   isCrouching: 0
   walljumps: 3
-  walljumpbounce: 40
+  walljumpbounce: 30
+  walljump2ndJumpmodifier: 0.5
   canJump: 0
   canWallJump: 0
   AllowWalk: 1
