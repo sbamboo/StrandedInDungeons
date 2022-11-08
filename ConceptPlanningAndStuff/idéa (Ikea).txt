@@ -71,3 +71,5 @@ dataSystem
 
 ability / enchantment to have a killing streak
 were after each kill the weapond/attacker makes sligtly more damage per kill up to a seartian degree were a cooldown happens before it restarts
+
+Sword: Omnius Disrespect
